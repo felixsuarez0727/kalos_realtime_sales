@@ -1,11 +1,11 @@
-#Kalos - Web System
+# Kalos - Web System
 
 This repository contains two separate projects:
 
 - **`kalos_backend`** – A REST API built with Node.js, Typescript and Hono.
 - **`kalos_frontend`** – A web application built with Next.js, Tailwind CSS.
 
-##📋 Requirements
+## 📋 Requirements
 
 - Node.js >= 18
 - npm (or yarn/pnpm)
@@ -13,9 +13,9 @@ This repository contains two separate projects:
 
 ---
 
-##📦 Installation
+## 📦 Installation
 
-###Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/felixsuarez0727/kalos_realtime_sales.git
