@@ -42,6 +42,11 @@ Run the backend
 npx tsx server.ts 
 ```
 
+🧪 How to Run Unit Tests?
+```bash
+npm test
+```
+
 💻Frontend Setup
 
 
@@ -59,4 +64,9 @@ Run the backend
 
 ```bash
 npm run dev
+```
+
+🧪 How to Run Unit Tests?
+```bash
+npm test
 ```
