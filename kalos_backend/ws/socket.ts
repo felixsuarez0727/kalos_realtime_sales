@@ -1,19 +1,18 @@
 import { WebSocketServer } from "ws";
 
-const wss = new WebSocketServer({ port: 8787 });
+let wss: WebSocketServer | null = null;
+if (process.env.NODE_ENV !== "test") {
+  wss = new WebSocketServer({ port: 8787 });
+  console.log("WebSocket iniciado en puerto 8787");
+}
 
-const clients: Set<WebSocket> = new Set();
-
-wss.on("connection", (ws) => {
-  clients.add(ws);
-  ws.on("close", () => clients.delete(ws));
-});
-
-export function broadcast(data: any) {
-  const json = JSON.stringify(data);
-  for (const client of clients) {
+export const broadcast = (data: any) => {
+  if (!wss) return;
+  for (const client of wss.clients) {
     if (client.readyState === client.OPEN) {
-      client.send(json);
+      client.send(JSON.stringify(data));
     }
   }
-}
+};
+
+export { wss };

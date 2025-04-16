@@ -7,6 +7,16 @@
     "zod": "^3.24.2"
   },
   "scripts": {
-    "dev": "tsx server.ts"
+    "dev": "ts-node server.ts",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@vitest/ui": "^3.1.1",
+    "supertest": "^7.1.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
+    "undici": "^7.8.0",
+    "vitest": "^3.1.1"
   }
 }
