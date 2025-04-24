@@ -19,9 +19,12 @@ export default function DashboardPage() {
   const [amount, setAmount] = useState('');
   const [currency, setCurrency] = useState('USD');
 
+  const apiUrl = window.location.hostname+':3001';
+  const wsUrl = window.location.hostname+':8787';
+
   // Cargar transacciones iniciales
   useEffect(() => {
-    fetch('http://localhost:3001/transactions')
+    fetch(`${apiUrl}/transactions`)
       .then((res) => res.json())
       .then((data: Transaction[]) => {
         setTransactions(data);
@@ -32,7 +35,7 @@ export default function DashboardPage() {
 
   // WebSocket
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:8787');
+    const ws = new WebSocket(wsUrl);
 
     ws.onmessage = (event) => {
       const message = JSON.parse(event.data);
@@ -65,7 +68,9 @@ export default function DashboardPage() {
     };
 
     try {
-      const res = await fetch('http://localhost:3001/transactions', {
+      const res = 
+      //await fetch('http://localhost:3001/transactions', {
+      await fetch(`${apiUrl}/transactions`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(transaction),
