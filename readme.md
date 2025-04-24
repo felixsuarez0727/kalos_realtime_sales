@@ -79,6 +79,18 @@ The unit tests were buit using 'Jest' and the tests are run over UI components.
 npm test
 ```
 
+# 💻 How to deploy a demo
+
+1. Download the repo.
+2. Open CMD.
+3. Run this command: `docker build -t my-app .`
+4. Wait till the image is built.
+5. Run this commnnd: `docker run -d  -p 3001:3001 -p 3000:3000 -p 8787:8787  my-app`
+6. Open your browser at the URL: `http://localhost:3000`
+
+
+Navitate to the frontend directory
+
 # 💡 Technical Decisions
 
 The project statement cited a suggested technology stack. The suggestion was taken as requirement and a nice challenge.

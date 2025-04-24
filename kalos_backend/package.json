@@ -7,8 +7,10 @@
     "zod": "^3.24.2"
   },
   "scripts": {
-    "dev": "ts-node server.ts",
-    "test": "vitest"
+    "dev": "tsx server.ts",
+    "test": "vitest",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "devDependencies": {
     "@types/node": "^22.14.1",
@@ -16,6 +18,7 @@
     "supertest": "^7.1.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
     "undici": "^7.8.0",
     "vitest": "^3.1.1"
   }
