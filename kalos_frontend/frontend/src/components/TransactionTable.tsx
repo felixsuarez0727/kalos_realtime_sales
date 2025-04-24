@@ -15,11 +15,14 @@ export function TransactionTable() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3001/transactions')
+    const apiUrl = process.env.API_URL || 'http://localhost:3001';
+    const wsUrl = process.env.WS_URL || 'ws://localhost:8787';
+
+    fetch(`${apiUrl}/transactions`)
       .then(res => res.json())
       .then(setTransactions);
 
-    const ws = new WebSocket('ws://localhost:8787');
+    const ws = new WebSocket(wsUrl);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'NEW_TRANSACTION') {

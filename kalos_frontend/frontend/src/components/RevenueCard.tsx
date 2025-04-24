@@ -6,11 +6,14 @@ export function RevenueCard() {
   const [revenue, setRevenue] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:3001/transactions')
-      .then(res => res.json())
-      .then(data => setRevenue(data.total));
+    const apiUrl = process.env.API_URL || 'http://localhost:3001';
+    const wsUrl = process.env.WS_URL || 'ws://localhost:8787';
 
-    const ws = new WebSocket('ws://localhost:8787');
+    fetch(`${apiUrl}/transactions`)
+    .then(res => res.json())
+    .then(data => setRevenue(data.total));
+
+    const ws = new WebSocket(wsUrl);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'REVENUE_UPDATE') {
