@@ -87,7 +87,7 @@ npm test
 4. Wait till the image is built.
 5. Run this commnnd: `docker run -d  -p 3001:3001 -p 3000:3000 -p 8787:8787  my-app`
 6. Open your browser at the URL: `http://localhost:3000`
-
+7. Check this demo deployed on Docker: [http://104.131.113.126:3000/]('http://104.131.113.126:3000/')
 
 # 💡 Technical Decisions
 
