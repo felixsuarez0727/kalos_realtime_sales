@@ -5,7 +5,7 @@ import transactions from "./routes/transactions";
 const app = new Hono();
 
 app.use("*", cors({
-  origin: "http://localhost:3000" 
+  origin: "*"
 }));
 
 app.route("/transactions", transactions);
