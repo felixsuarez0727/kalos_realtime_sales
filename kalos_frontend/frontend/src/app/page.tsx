@@ -18,10 +18,12 @@ export default function DashboardPage() {
   const [customerName, setCustomerName] = useState('');
   const [amount, setAmount] = useState('');
   const [currency, setCurrency] = useState('USD');
-
+  
+  const apiUrl = window.location.hostname+':3001';
+  const wsUrl = window.location.hostname+':8787';
   // Cargar transacciones iniciales
   useEffect(() => {
-    fetch('http://localhost:3001/transactions')
+    fetch(`${apiUrl}/transactions`)
       .then((res) => res.json())
       .then((data: Transaction[]) => {
         setTransactions(data);
@@ -32,7 +34,7 @@ export default function DashboardPage() {
 
   // WebSocket
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:8787');
+    const ws = new WebSocket(wsUrl);
 
     ws.onmessage = (event) => {
       const message = JSON.parse(event.data);
