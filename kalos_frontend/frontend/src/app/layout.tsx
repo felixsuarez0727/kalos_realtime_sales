@@ -20,7 +20,7 @@ export default function RootLayout({
             <h1 className="text-xl font-bold">📊 Sales Dashboard</h1>
             <ul className="flex space-x-4">
               <li>
-                <Link href="/dashboard" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   Dashboard
                 </Link>
               </li>

@@ -19,8 +19,8 @@ export default function DashboardPage() {
   const [amount, setAmount] = useState('');
   const [currency, setCurrency] = useState('USD');
   
-  const apiUrl = window.location.hostname+':3001';
-  const wsUrl = window.location.hostname+':8787';
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL!;
+  const wsUrl = process.env.NEXT_PUBLIC_WS_URL!;
   // Cargar transacciones iniciales
   useEffect(() => {
     fetch(`${apiUrl}/transactions`)

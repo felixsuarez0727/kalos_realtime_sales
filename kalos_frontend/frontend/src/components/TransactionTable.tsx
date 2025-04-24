@@ -15,8 +15,8 @@ export function TransactionTable() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    const apiUrl = window.location.hostname+':3001';
-    const wsUrl = window.location.hostname+':8787';
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL!;
+    const wsUrl = process.env.NEXT_PUBLIC_WS_URL!;
 
     fetch(`${apiUrl}/transactions`)
       .then(res => res.json())
