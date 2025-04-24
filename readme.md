@@ -89,8 +89,6 @@ npm test
 6. Open your browser at the URL: `http://localhost:3000`
 
 
-Navitate to the frontend directory
-
 # 💡 Technical Decisions
 
 The project statement cited a suggested technology stack. The suggestion was taken as requirement and a nice challenge.

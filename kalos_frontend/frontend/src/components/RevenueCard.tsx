@@ -6,8 +6,8 @@ export function RevenueCard() {
   const [revenue, setRevenue] = useState(0);
 
   useEffect(() => {
-    const apiUrl = process.env.API_URL || 'http://localhost:3001';
-    const wsUrl = process.env.WS_URL || 'ws://localhost:8787';
+    const apiUrl = window.location.hostname+':3001';
+    const wsUrl = window.location.hostname+':8787';
 
     fetch(`${apiUrl}/transactions`)
     .then(res => res.json())
