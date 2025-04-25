@@ -92,9 +92,14 @@ npm test
 
 # 💡 Technical Decisions
 
-The project statement cited a suggested technology stack. The suggestion was taken as requirement and a nice challenge.
+The project statement cited a suggested technology stack. 
+```
+-   Frontend: You can use any frontend framework. Note: Kalos uses NextJS with Typescript, Tailwind CSS, and tRPC. 
+-   Backend: You can use any backend framework or language. Note: Kalos uses Typescript with Hono for its backend
+```
+The suggestion was taken as requirement and a nice challenge.
 
-As developer I like learning new technologies. I found interesting the aproach of Hono. I did not know this option for backend.
+As a developer, I enjoy learning new technologies. I found Hono's approach quite interesting—it's a backend option I wasn't previously aware of.
 
 I chose to develop using Sqlite because it is convinient for demo purposes.
 
