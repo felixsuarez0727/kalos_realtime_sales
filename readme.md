@@ -93,10 +93,10 @@ npm test
 # 💡 Technical Decisions
 
 The project statement cited a suggested technology stack. 
-```
--   Frontend: You can use any frontend framework. Note: Kalos uses NextJS with Typescript, Tailwind CSS, and tRPC. But it is not important you follow suit. 
--   Backend: You can use any backend framework or language. Note: Kalos uses Typescript with Hono for its backend. But it is not important you follow suit.
-```
+
+-   _Frontend: You can use any frontend framework. Note: Kalos uses NextJS with Typescript, Tailwind CSS, and tRPC. But it is not important you follow suit._
+-   _Backend: You can use any backend framework or language. Note: Kalos uses Typescript with Hono for its backend. But it is not important you follow suit._
+
 The suggestion was taken as requirement and a nice challenge.
 
 As a developer, I enjoy learning new technologies. I found Hono's approach quite interesting—it's a backend option I wasn't previously aware of.
