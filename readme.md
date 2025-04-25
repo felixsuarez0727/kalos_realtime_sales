@@ -99,7 +99,7 @@ The project statement cited a suggested technology stack.
 
 The suggestion was taken as requirement and a nice challenge.
 
-As a developer, I enjoy learning new technologies. I found Hono's approach quite interesting—it's a backend option I wasn't previously aware of.
+As a developer, I enjoy learning new technologies. I found Hono's approach quite interesting.
 
 I chose to develop using Sqlite because it is convinient for demo purposes.
 
